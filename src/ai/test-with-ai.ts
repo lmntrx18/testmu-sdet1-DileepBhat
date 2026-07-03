@@ -4,7 +4,6 @@ import { explainFailure } from './failure-explainer';
 export const test = base.extend({});
 
 test.afterEach(async ({ page }, testInfo) => {
-    console.log("AI afterEach executed");
     console.log("Status:", testInfo.status);
     console.log("Expected:", testInfo.expectedStatus);
   if (testInfo.status !== testInfo.expectedStatus) {

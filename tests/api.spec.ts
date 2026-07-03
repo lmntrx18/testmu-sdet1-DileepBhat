@@ -1,7 +1,7 @@
 // import { test, expect } from '@playwright/test';
-import { test, expect } from '../../src/ai/test-with-ai';
-import { setApiFailureContext } from '../../src/ai/failure-context-store';
-import { ApiClient } from '../../src/pages/api';
+import { test, expect } from '../src/ai/test-with-ai';
+import { setApiFailureContext } from '../src/ai/failure-context-store';
+import { ApiClient } from '../src/pages/api';
 
 const TEST_EMAIL = process.env.TEST_USER_EMAIL || '';
 const TEST_PASSWORD = process.env.TEST_USER_PASSWORD || '';

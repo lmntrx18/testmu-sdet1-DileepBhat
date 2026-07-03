@@ -1,7 +1,7 @@
 // import { test, expect } from '@playwright/test';
-import { test, expect } from '../../src/ai/test-with-ai';
-import { LoginPage } from '../../src/pages/login.page';
-import { DashboardPage } from '../../src/pages/dashboard';
+import { test, expect } from '../src/ai/test-with-ai';
+import { LoginPage } from '../src/pages/login.page';
+import { DashboardPage } from '../src/pages/dashboard';
 
 const TEST_EMAIL = process.env.TEST_USER_EMAIL || '';
 const TEST_PASSWORD = process.env.TEST_USER_PASSWORD || '';

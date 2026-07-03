@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-  testDir: './report/tests',
+  testDir: './tests',
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
   reporter: [
