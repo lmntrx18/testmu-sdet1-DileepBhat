@@ -1,4 +1,6 @@
-import { test, expect } from '@playwright/test';
+// import { test, expect } from '@playwright/test';
+import { test, expect } from '../../src/ai/test-with-ai';
+import { setApiFailureContext } from '../../src/ai/failure-context-store';
 import { ApiClient } from '../../src/pages/api';
 
 const TEST_EMAIL = process.env.TEST_USER_EMAIL || '';
@@ -67,6 +69,11 @@ test.describe('API Module', () => {
     const response = await apiClient.getNoteById(nonExistentId);
     const body = await response.json();
 
+    setApiFailureContext({
+    apiRequest: { method: 'GET', endpoint: `/notes/${nonExistentId}` },
+    apiResponse: { status: response.status(), body },
+  });
+  
     expect(response.status()).toBe(404);
     expect(body.success).toBe(false);
     expect(body.message).toContain("No note was found with the provided ID, Maybe it was deleted");

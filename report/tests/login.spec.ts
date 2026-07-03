@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+// import { test, expect } from '@playwright/test';
+import { test, expect } from '../../src/ai/test-with-ai';
 import { LoginPage } from '../../src/pages/login.page';
 
 // Generates a unique email per test run so registration never collides
