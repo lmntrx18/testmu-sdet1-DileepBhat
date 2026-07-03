@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../src/pages/login.page';
-import { DashboardPage } from '../../src/pages/dashboard.ts';
+import { DashboardPage } from '../../src/pages/dashboard';
 
-const TEST_EMAIL = 'asdsa@gmail.com';
-const TEST_PASSWORD = 'demon1245';
+const TEST_EMAIL = process.env.TEST_USER_EMAIL || '';
+const TEST_PASSWORD = process.env.TEST_USER_PASSWORD || '';
 
 test.describe('Dashboard Module', () => {
 
